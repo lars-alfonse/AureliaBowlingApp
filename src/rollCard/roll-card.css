@@ -1,0 +1,38 @@
+.card-wrapper{
+  display: grid;
+  grid-template-columns:50px 80px 80px 80px;
+  grid-template-rows: 10% 80% 10%;
+  border-bottom: 3px solid blueviolet;
+  height: 18px;
+  margin-bottom: 10px;
+}
+.frames{
+  grid-column: 1/4;
+  grid-row:2;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  border: 1px blueviolet;
+  border-style: solid;
+}
+.header{
+  grid-row: 1;
+  margin-bottom: 10px;
+}
+.score-display-wrapper{
+  grid-column: 1/4;
+}
+.frame-header{
+  grid-column: 1;
+}
+.roll1-header{
+  padding-left: 10px;
+  grid-column: 2;
+}
+.roll2-header{
+  padding-left: 10px;
+  grid-column: 3;
+}
+.roll3.header{
+  padding-left: 10px;
+  grid-column: 4;
+}

@@ -1,0 +1,18 @@
+<template>
+  <require from="../rollCardLine/roll-card-line"></require>
+  <require from="./roll-card.css"></require>
+  <div class="card-wrapper">
+    <div class="header frame-header">Frame</div>
+    <div class="header roll1-header">Roll 1</div>
+    <div class="header roll2-header">Roll 2</div>
+    <div class="header roll3-header">Roll 3</div>
+  </div>
+  <div class="frames">
+    <div repeat.for="i of 10" css="grid-row: ${i+1}; grid-column: 1/5">
+      <roll-card-line css="grid-row: ${i+1}" frame.bind="state.rollCardState.frames[i]" index.bind="i" callback.call="onRollsChanged(index, rolls)">
+    </div>
+  </div>
+  <div class="score-display-wrapper">
+    <h1>Score: ${score}</h1>
+  </div>
+</template>

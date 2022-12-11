@@ -1,0 +1,18 @@
+<template>
+  <require from="./roll-card-line.css"></require>
+  <require from="../rollInput/roll-input"></require>
+  <div class="frame-wrapper"> 
+    <div class="frame-label grid-item">
+      ${index+1}
+    </div>
+    <div class="roll grid-item" repeat.for="i of 3" css="grid-column: ${i+2}" >
+      <roll-input 
+        if.bind="$parent.rolls.length > i" 
+        input.bind="$parent.rolls[i]" 
+        callback.call="inputUpdated(newValue, oldValue, i)"
+        min="0" 
+        max.bind="i==1?maxSecondRoll:(i==2 ? maxThirdRoll :10)"/>
+    </div>
+  </div>
+
+</template>

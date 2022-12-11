@@ -1,0 +1,9 @@
+<template>
+  <require from="./roll-input.css"></require>
+  <input
+    class="input"
+    value.bind="value & throttle"
+    min.bind="min"
+    max.bind="max"
+  />
+</template>

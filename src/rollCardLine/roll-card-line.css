@@ -1,0 +1,15 @@
+.frame-wrapper{
+  display: grid;
+  grid-template-columns:50px 80px 80px 80px;
+}
+.frame-label{
+  padding: 4px;
+  grid-column: 1;
+}
+.roll{
+  width: 100%;
+}
+.grid-item{
+  border: 1px blueviolet;
+  border-style: solid;
+}
